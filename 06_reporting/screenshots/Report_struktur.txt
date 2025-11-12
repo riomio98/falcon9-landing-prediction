@@ -1,0 +1,169 @@
+Outline
+Executive Summary​
+
+Introduction​
+
+Methodology​
+
+Results​
+
+Conclusion​
+
+Appendix
+
+
+Final Exam Reporting Pack (Repository + Presentation)
+
+This document gives you a ready-to-use structure for your GitHub repository and a slide-by-slide outline for your PDF presentation. All content below is in the order you should present it.
+
+
+1) Repository Structure (GitHub)
+
+Use this tree to organize the deliverables. Do NOT delete your original numbered folders; link to them from the new folders as shown.
+
+project-root/
+	├─ README.md                     # Project overview, quickstart, links to key assets
+	├─ requirements.txt              # Python dependencies
+	├─ data/
+	│   ├─ raw/                      # Inputs as collected (immutable)
+	│   ├─ interim/                  # Intermediate outputs from wrangling
+	│   └─ processed/                # Clean/analysis-ready data
+	│   └─ README.md                 # Data dictionary and handling rules
+	├─ src/
+	│   ├─ data/                     # Loading, cleaning, feature engineering
+	│   ├─ visualization/            # Plot helpers, dashboards
+	│   ├─ models/                   # Training, evaluation, inference scripts
+	│   └─ utils.py                  # Shared utilities
+	├─ notebooks/                    # Narrative analysis notebooks
+	│   ├─ 01_data_collection.ipynb  # Link to 01_datenerfassung notebooks
+	│   ├─ 02_data_wrangling.ipynb   # Link to 02_data_wrangling
+	│   ├─ 03_eda.ipynb              # Link to 03_exploratory_Data_analysis
+	│   ├─ 04_visualization.ipynb    # Link to 04_vizualisation
+	│   └─ 05_modeling.ipynb         # Link to 05_model_training
+	├─ reports/
+	│   ├─ presentation/             # Slides source and exported PDF
+	│   │   ├─ outline.md            # This presentation outline (source)
+	│   │   ├─ figures/              # Images used in slides
+	│   │   └─ slides.pdf            # Exported final PDF
+	│   ├─ paper/
+	│   │   └─ outline.md            # Optional written report
+	│   └─ README.md                 # How to export PDF and what to include
+	└─ docs/                         # Additional docs (optional)
+
+Mapping to your existing content:
+- 01_datenerfassung → notebooks/01_data_collection.ipynb (link) and src/data/
+- 02_data_wrangling → notebooks/02_data_wrangling.ipynb (link) and src/data/
+- 03_exploratory_Data_analysis → notebooks/03_eda.ipynb (link)
+- 04_vizualisation → notebooks/04_visualization.ipynb (link) and src/visualization/
+- 05_model_training → notebooks/05_modeling.ipynb (link) and src/models/
+
+Tip: Keep heavy files out of Git. Store only small samples in data/raw and add a data/README.md with download instructions.
+
+
+2) Presentation Outline (PDF)
+
+Slide 1 — Title & Executive Summary
+- Project name, your name, date
+- 2–3 bullet insights (what you found, business value)
+- 1 bullet on approach (API + scraping → wrangling → EDA → dashboard → model)
+
+Slide 2 — Problem & Goals
+- Business question(s) you answer
+- Success criteria (e.g., accuracy > X, insights supporting decision Y)
+
+Slide 3 — Data Sources & Collection
+- SpaceX REST API and web scraping overview
+- Flowchart: collection pipeline
+- Link to notebooks (API, scraping)
+
+Slide 4 — Data Wrangling
+- Cleaning and transformations (missing values, types, feature engineering)
+- Small table: raw → processed rows/columns
+- Link to wrangling notebook
+
+Slide 5 — EDA Highlights (Visual)
+- 2–3 key charts with 1-line insights each
+- Why these charts (relationship, distribution, trend)
+- Link to EDA notebook
+
+Slide 6 — EDA Highlights (SQL)
+- 3–5 succinct query findings (bullets)
+- What each insight implies
+- Link to SQL notebook
+
+Slide 7 — Interactive Analytics (Folium)
+- Map objects used (markers, circles, lines)
+- Screenshot(s) + 1–2 insights
+- Link to Folium notebook
+
+Slide 8 — Dashboard (Plotly Dash)
+- Main interactions and plots
+- 1–2 screenshots + what the user can learn quickly
+- Link to Dash app/notebook
+
+Slide 9 — Modeling (Classification)
+- Models tried, feature set, target
+- Tuning and evaluation protocol (train/test split, cross-validation)
+- Best model and metric(s)
+
+Slide 10 — Results & Error Analysis
+- Accuracy (or relevant metric) comparison bar chart
+- Confusion matrix of best model + 1–2 sentences of interpretation
+
+Slide 11 — Conclusions & Recommendations
+- 3–5 decisions or next steps enabled by findings
+- Limitations and assumptions
+
+Slide 12 — Appendix / References
+- Links to all notebooks and data dictionary
+- Backup plots or SQL results
+
+
+3) Links to include (replace with your actual GitHub URLs)
+- Data Collection (API): notebooks/01_data_collection.ipynb
+- Data Collection (Scraping): notebooks/01_data_collection.ipynb (web scraping section)
+- Data Wrangling: notebooks/02_data_wrangling.ipynb
+- EDA (Visual): notebooks/03_eda.ipynb
+- EDA (SQL): notebooks/03_eda.ipynb (SQL section)
+- Folium Map: notebooks/04_visualization.ipynb
+- Plotly Dash: 04_vizualisation/Dash_viz_spacex.py
+- Modeling: notebooks/05_modeling.ipynb
+
+
+4) How to export to PDF (Slides)
+Option A — VS Code
+1. Open reports/presentation/outline.md and add your images to reports/presentation/figures.
+2. Use a Markdown-to-PDF extension (e.g., Markdown PDF) to export slides.pdf.
+
+Option B — Browser Print
+1. Render the Markdown to HTML (VS Code preview).
+2. Print to PDF (A4 or 16:9, include backgrounds).
+
+Option C — PowerPoint/Google Slides
+1. Copy the outline into slides, paste images.
+2. Export as PDF and save as reports/presentation/slides.pdf.
+
+
+5) Quality Checklist (before submission)
+- README.md explains the project and points to slides.pdf
+- reports/presentation/slides.pdf opens and all images are visible
+- Notebooks run top-to-bottom on your machine
+- requirements.txt installs without errors
+- No large data files tracked in Git; data/README.md explains how to fetch
+
+
+6) Appendix — Detailed Content Prompts (optional)
+
+You can reuse the bullets below to quickly fill slides and the written report:
+- Flight Number vs. Launch Site — scatter: what pattern does site show?
+- Payload vs. Launch Site — scatter: any thresholds where success changes?
+- Success Rate vs. Orbit Type — bar: which orbits have highest success?
+- Flight Number vs. Orbit Type — scatter: maturation across orbits?
+- Payload vs. Orbit Type — scatter: optimal payload ranges by orbit?
+- Yearly Trend — line: how has success changed over time?
+- SQL: unique launch sites, sites starting with CCA, payload totals and averages, first successful landings, filtered successes, outcome counts, max payload boosters, 2015 failures, ranked outcomes in a period.
+
+For modeling:
+- List candidate algorithms (Logistic Regression, SVM, Random Forest, KNN)
+- Show hyperparameters tuned and metric used (e.g., F1-score)
+- Confusion matrix interpretation: which classes are confused and why
