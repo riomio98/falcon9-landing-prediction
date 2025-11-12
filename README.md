@@ -61,9 +61,9 @@ This repository contains an end-to-end data science project focused on predictin
    pip install -r requirements.txt
    ```
 2. **Open and run the notebooks:**
-   - Start with data collection in `01_datenerfassung/`.
+   - Start with data collection in `01_data_cleaning/`.
    - Proceed through wrangling, EDA, visualization, and modeling folders.
-   - For a complete, reproducible run, use `06_Reporting/combined_workspace.ipynb` (contains all key steps, guarded for safe execution).
+   - For a complete, reproducible run, use `06_reporting/combined_workspace.ipynb` (contains all key steps, guarded for safe execution).
 3. **Screenshots and reporting:**
    - Use outputs from the consolidated notebook for documentation and appendix.
 
@@ -74,5 +74,6 @@ This repository contains an end-to-end data science project focused on predictin
 
 ## Authors
 - Project by Dario Beil and contributors
+
 
 
