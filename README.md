@@ -73,7 +73,6 @@ This repository contains an end-to-end data science project focused on predictin
 - Provided CSVs in the repository
 
 ## Authors
-- Project by [Your Name] and contributors
+- Project by Dario Beil and contributors
 
-## License
-This project is licensed under the terms of the MIT License. See the `LICENSE` file for details.
+
